@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/signInMotion"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragLeft" />
+        <OnClick motion:targetId="@id/logSignEmailRightTv" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/signUpMotion"
+        motion:constraintSetStart="@id/signInMotion"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnClick motion:targetId="@id/logSignEmailRightTv" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/signUpMotion"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragRight" />
+        <OnClick motion:targetId="@id/logSignUpLeftTv" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/signInMotion"
+        motion:constraintSetStart="@id/signUpMotion"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        />
+        <OnClick motion:targetId="@id/logSignUpLeftTv" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragUp" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetEnd="@+id/signInMotion"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1500">
+        <KeyFrameSet></KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragDown" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+
+    <ConstraintSet android:id="@+id/signUpMotion">
+        <Constraint
+            android:id="@+id/logSignMainGif"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline55"
+            motion:layout_constraintEnd_toEndOf="@id/guideline59"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/logSignGoogleBtnCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/guideline56" />
+
+        <Constraint
+            android:id="@+id/logSignUpLeftTv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline56"
+            motion:layout_constraintEnd_toStartOf="@id/guideline60"
+            motion:layout_constraintStart_toEndOf="@id/guideline63"
+            motion:layout_constraintTop_toBottomOf="@id/guideline55" />
+
+        <Constraint
+            android:id="@+id/logSignUpCLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline56"
+            motion:layout_constraintEnd_toStartOf="@id/guideline63"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/guideline55" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/signInMotion">
+        <Constraint
+            android:id="@+id/logSignMainGif"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline55"
+            motion:layout_constraintEnd_toEndOf="@id/guideline59"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/logSignGoogleBtnCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/guideline56" />
+
+        <Constraint
+            android:id="@+id/logSignUpLeftTv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline56"
+            motion:layout_constraintEnd_toStartOf="@id/guideline58"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/guideline55" />
+
+        <Constraint
+            android:id="@+id/logSignEmailRightTv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline56"
+            motion:layout_constraintEnd_toStartOf="@id/guideline62"
+            motion:layout_constraintStart_toEndOf="@id/guideline58"
+            motion:layout_constraintTop_toBottomOf="@id/guideline55" />
+        <Constraint
+            android:id="@+id/logSignInCLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            motion:layout_constraintBottom_toTopOf="@id/guideline56"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/guideline62"
+            motion:layout_constraintTop_toBottomOf="@id/guideline55" />
+
+    </ConstraintSet>
+</MotionScene>
